@@ -46,7 +46,9 @@ const StoryCircleListItem = ({
   const avatarWrapperSize = avatarSize + 4;
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container,{
+      width: avatarWrapperSize,
+    }]}>
       <TouchableOpacity
         onPress={() => _handleItemPress(item)}
         style={[
@@ -77,7 +79,9 @@ const StoryCircleListItem = ({
           source={{ uri: item.avatar_image }}
           defaultSource={Platform.OS === 'ios' ? DEFAULT_AVATAR : null}
         />
-        {showText && (
+       
+      </TouchableOpacity>
+      {showText && (
         <Text
           numberOfLines={1}
           ellipsizeMode="tail"
@@ -95,8 +99,6 @@ const StoryCircleListItem = ({
           {item.user_name}
         </Text>
       )}
-      </TouchableOpacity>
-      
     </View>
   );
 };
