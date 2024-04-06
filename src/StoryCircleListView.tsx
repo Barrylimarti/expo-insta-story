@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     flex: 1,
-    width: 8,
+    width: 2,
   },
 });
 
