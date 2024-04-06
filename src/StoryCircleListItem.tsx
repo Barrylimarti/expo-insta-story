@@ -77,8 +77,7 @@ const StoryCircleListItem = ({
           source={{ uri: item.avatar_image }}
           defaultSource={Platform.OS === 'ios' ? DEFAULT_AVATAR : null}
         />
-      </TouchableOpacity>
-      {showText && (
+        {showText && (
         <Text
           numberOfLines={1}
           ellipsizeMode="tail"
@@ -96,6 +95,8 @@ const StoryCircleListItem = ({
           {item.user_name}
         </Text>
       )}
+      </TouchableOpacity>
+      
     </View>
   );
 };
