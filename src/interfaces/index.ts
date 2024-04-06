@@ -96,6 +96,7 @@ export interface StoryCircleListViewProps extends SharedCircleListProps {
    * - `keyExtractor`
    */
   avatarFlatListProps?: CircleListViewFlatListProps;
+  orientation?:'horizontal'|'vertical'
 }
 
 export interface StoryCircleListItemProps extends SharedCircleListProps {
@@ -236,4 +237,7 @@ export interface StoryProps {
   storyContainerStyle?: ViewStyle;
 
   storyVideoStyle?: ViewStyle;
+
+  //Custom prop for horizontal and vertical orientation
+  orientation?:'horizontal'|'vertical';
 }
